@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo systemctl restart NetworkManager
+sudo service networking restart
+sudo airmon-ng stop wlan0mon &>/dev/null 
+sudo service networking restart &>/dev/null &
+sudo service network-manager restart &>/dev/null &
+echo -e "wifi is fixed have fun <3"
